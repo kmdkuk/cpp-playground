@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.pde": "java",
+    "Dockerfile-dev": "dockerfile",
+    "iostream": "cpp"
+  }
+}

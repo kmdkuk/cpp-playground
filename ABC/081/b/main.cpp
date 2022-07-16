@@ -9,16 +9,34 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
-int main() {
-  string a, b;
-  cin >> a;
-  cin >> b;
-  int i = std::stoi(a + b);
+int main()
+{
+  int n;
+  cin >> n;
+  int a[n];
+  rep(i, n)
+  {
+    cin >> a[i];
+  }
 
-  string ans = "No";
-  ll r = (ll)floor(sqrt(i));
-  if ((r * r) == i) {
-    ans = "Yes";
+  bool flag = true;
+  int ans = 0;
+  while (flag)
+  {
+    rep(i, n)
+    {
+      if (a[i] % 2 != 0)
+      {
+        flag = false;
+        break;
+      }
+      a[i] = a[i] / 2;
+      continue;
+    }
+    if (flag)
+    {
+      ans++;
+    }
   }
 
   cout << ans << endl;
