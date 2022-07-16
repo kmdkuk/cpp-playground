@@ -15,68 +15,81 @@ f=${pwd}/ABC/$1/f
 g=${pwd}/ABC/$1/g
 
 mkdir -p $a
-
-
-cp -n template.cpp $a/main.cpp
+cp -n ${pwd}/template.cpp $a/main.cpp
 cd $a
-oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_a
-ret=$?
-if [ $ret -ne 0 ]; then
-    rm -rf $a
+
+if [ ! -e ${a}/test ]; then
+    oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_a
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        rm -rf $a
+    fi
 fi
 
 mkdir -p $b
-cp -n template.cpp $b/main.cpp
+cp -n ${pwd}/template.cpp $b/main.cpp
 cd $b
-oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_b
-ret=$?
-if [ $ret -ne 0 ]; then
-    rm -rf $b
+if [ ! -e ${b}/test ]; then
+    oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_b
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        rm -rf $b
+    fi
 fi
 
 mkdir -p $c
-cp -n template.cpp $c/main.cpp
+cp -n ${pwd}/template.cpp $c/main.cpp
 cd $c
-oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_c
-ret=$?
-if [ $ret -ne 0 ]; then
-    rm -rf $c
+if [ ! -e ${c}/test ]; then
+    oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_c
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        rm -rf $c
+    fi
 fi
 
 mkdir -p $d
-cp -n template.cpp $d/main.cpp
+cp -n ${pwd}/template.cpp $d/main.cpp
 cd $d
-oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_d
-ret=$?
-if [ $ret -ne 0 ]; then
-    rm -rf $d
+if [ ! -e ${d}/test ]; then
+    oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_d
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        rm -rf $d
+    fi
 fi
 
 mkdir -p $e
-cp -n template.cpp $e/main.cpp
+cp -n ${pwd}/template.cpp $e/main.cpp
 cd $e
-oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_e
-ret=$?
-if [ $ret -ne 0 ]; then
-    rm -rf $e
+if [ ! -e ${e}/test ]; then
+    oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_e
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        rm -rf $e
+    fi
 fi
 
 mkdir -p $f
-cp -n template.cpp $f/main.cpp
+cp -n ${pwd}/template.cpp $f/main.cpp
 cd $f
-oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_f
-ret=$?
-if [ $ret -ne 0 ]; then
-    rm -rf $f
+if [ ! -e ${f}/test ]; then
+    oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_f
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        rm -rf $f
+    fi
 fi
 
 mkdir -p $g
-cp -n template.cpp $g/main.cpp
+cp -n ${pwd}/template.cpp $g/main.cpp
 cd $g
-oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_g
-ret=$?
-if [ $ret -ne 0 ]; then
-    rm -rf $g
+if [ ! -e ${g}/test ]; then
+    oj download https://atcoder.jp/contests/abc${1}/tasks/abc${1}_g
+    ret=$?
+    if [ $ret -ne 0 ]; then
+        rm -rf $g
+    fi
 fi
 
 exit 0
