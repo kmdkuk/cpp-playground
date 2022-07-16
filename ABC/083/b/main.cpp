@@ -9,16 +9,31 @@ using P = pair<int, int>;
 using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
+int sumEachDigits(int n)
+{
+  int sum = 0;
+  while (n > 0)
+  {
+    sum += n % 10;
+    n /= 10;
+  }
+  return sum;
+}
+
 int main()
 {
-  int x, a, b;
-  cin >> x;
-  cin >> a;
-  cin >> b;
+  int n, a, b;
+  cin >> n >> a >> b;
 
-  x -= a;
-
-  int ans = x % b;
+  int ans = 0;
+  rep1(i, n)
+  {
+    int sum = sumEachDigits(i);
+    if (a <= sum && sum <= b)
+    {
+      ans += i;
+    }
+  }
 
   cout << ans << endl;
   return 0;

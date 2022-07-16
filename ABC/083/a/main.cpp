@@ -11,14 +11,18 @@ using mint = modint1000000007;
 
 int main()
 {
-  int x, a, b;
-  cin >> x;
-  cin >> a;
-  cin >> b;
+  int a, b, c, d;
+  cin >> a >> b >> c >> d;
 
-  x -= a;
-
-  int ans = x % b;
+  string ans = "Right";
+  if (a + b == c + d)
+  {
+    ans = "Balanced";
+  }
+  else if (a + b > c + d)
+  {
+    ans = "Left";
+  }
 
   cout << ans << endl;
   return 0;
