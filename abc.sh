@@ -23,7 +23,7 @@ function create_dir(){
     fi
 }
 
-case_list="a b c d e f g"
+case_list="a b c d e f g h"
 
 for c in ${case_list};do
     create_dir $1 $c $2
