@@ -15,7 +15,7 @@
                 "-L/opt/boost/gcc/lib",
                 "-I${workspaceFolder}/ac-library",
                 "-o",
-                "'${workspaceFolder}/problem'",
+                "'${fileDirname}/a.out'",
                 "'${file}'",
             ],
             "group": {

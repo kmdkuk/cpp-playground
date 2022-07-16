@@ -29,5 +29,6 @@
 # Executables
 *.exe
 *.app
+a.out
 
 ac-library

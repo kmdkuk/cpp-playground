@@ -10,10 +10,18 @@ using Graph = vector<vector<int>>;
 using mint = modint1000000007;
 
 int main() {
-  int n;
-  cin >> n;
+  int a;
+  int b;
+  cin >> a;
+  cin >> b;
 
-  int ans = 0;
+  int prod;
+  prod = a * b;
+
+  string ans = "Odd";
+  if (prod % 2 == 0) {
+    ans = "Even";
+  }
 
   cout << ans << endl;
   return 0;
