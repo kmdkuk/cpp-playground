@@ -13,23 +13,20 @@ int main()
 {
   int n;
   cin >> n;
-  int a[n];
-  rep(i, n) cin >> a[i];
-  int alice = 0;
-  int bob = 0;
-  sort(a, a + n, greater<int>());
+  int d[n];
+  rep(i, n) cin >> d[i];
+  sort(d, d + n, greater<int>());
+
+  int end = 0;
   rep(i, n)
   {
-    if (i % 2 == 0)
+    if (d[i] != d[end])
     {
-      alice += a[i];
-      continue;
+      end++;
+      d[end] = d[i];
     }
-    bob += a[i];
   }
 
-  int ans = alice - bob;
-
-  cout << ans << endl;
+  cout << end + 1 << endl;
   return 0;
 }
