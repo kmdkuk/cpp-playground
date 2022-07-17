@@ -32,3 +32,5 @@
 a.out
 
 ac-library
+random*.in
+random*.out
