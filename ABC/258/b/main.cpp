@@ -111,10 +111,7 @@ int main()
     rep(i, N)
     {
       auto next = get_next(now, A, N);
-      for (auto n : next)
-      {
-      }
-    }
+        }
   }
 
   int ans = 0;
