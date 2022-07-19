@@ -1,0 +1,10 @@
+-std=gnu++17
+-std=gnu++17
+-Wall
+-Wextra
+-O2
+-DONLINE_JUDGE
+-I/opt/boost/include
+-L/opt/boost/lib
+-I/opt/ac-library
+

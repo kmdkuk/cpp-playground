@@ -13,7 +13,7 @@
         "-DONLINE_JUDGE",
         "-I/opt/boost/gcc/include",
         "-L/opt/boost/gcc/lib",
-        "-I${workspaceFolder}/ac-library",
+        "-I/opt/ac-library",
         "-o",
         "'${fileDirname}/a.out'",
         "'${file}'"
