@@ -11,11 +11,23 @@ using mint = modint1000000007;
 
 int main()
 {
-  int n;
-  cin >> n;
-
-  int ans = 0;
-
-  cout << ans << endl;
+  int N;
+  cin >> N;
+  string S[N];
+  rep(i, N) cin >> S[i];
+  map<string, int> folder;
+  rep(i, N)
+  {
+    if (!folder.count(S[i]))
+    {
+      folder[S[i]] = 0;
+      cout << S[i] << endl;
+    }
+    else
+    {
+      folder[S[i]]++;
+      cout << S[i] << "(" << folder[S[i]] << ")" << endl;
+    }
+  }
   return 0;
 }
